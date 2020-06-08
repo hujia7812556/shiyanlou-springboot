@@ -1,32 +1,18 @@
-package com.shiyanlou.springboot.first;
+package com.shiyanlou.springboot.entity;
 
-import javax.persistence.*;
+import java.io.Serializable;
 
-/**
- * 设置表名为 two_one，并且标记该类为实体类
- */
-@Table(name = "user_one")
-@Entity
-public class UserOne{
 
-    /**
-     * 设置主键生成策略
-     */
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    public int id;
-
-    @Column
+public class User implements Serializable{
+    private Integer id;
     private String username;
-
-    @Column
     private String password;
 
-    public int getId(){
+    public Integer getId(){
         return id;
     }
 
-    public void setId(int id){
+    public void setId(Integer id){
         this.id = id;
     }
 
