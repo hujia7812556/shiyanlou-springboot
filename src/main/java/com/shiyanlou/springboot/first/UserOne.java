@@ -1,13 +1,13 @@
-package com.shiyanlou.springboot;
+package com.shiyanlou.springboot.first;
 
 import javax.persistence.*;
 
 /**
- * 设置表名为 user，并且标记该类为实体类
+ * 设置表名为 two_one，并且标记该类为实体类
  */
-@Table(name = "user")
+@Table(name = "user_one")
 @Entity
-public class User{
+public class UserOne{
 
     /**
      * 设置主键生成策略
