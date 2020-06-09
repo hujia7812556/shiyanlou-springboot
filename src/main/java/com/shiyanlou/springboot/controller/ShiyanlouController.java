@@ -1,14 +1,18 @@
-package com.shiyanlou.springboot.controller;
+package com.shiyanlou.springboot;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-// 注意这里已经不是 @RestController 了和上个试验不同，因为需要返回视图，所以不能使用 @ResponseBody
-@Controller
+@RestController
 public class ShiyanlouController{
+
+    @Value("${hello}")
+    private String hello;
+
 
     @RequestMapping("shiyanlou")
     public String shiyanlou(){
-        return "shiyanlou";
+        return hello;
     }
 }
