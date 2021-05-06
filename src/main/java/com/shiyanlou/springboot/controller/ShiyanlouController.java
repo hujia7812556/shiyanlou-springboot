@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ShiyanlouController{
 
-    @Value("${hello}")
+    @Value("77777")
     private String hello;
 
 
